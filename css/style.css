@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "League Spartan";
+    src: url("../assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 100%);
+    background-image: url("../assets/images/bg-pattern-top-desktop.svg"), url("../assets/images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 100% 100%;
+    font-family: "League Spartan";
+}
+
+.s-container {
+    margin: auto;
+    padding: 0 2rem;
+    max-width: 1174px;
+}
+
+.s-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+}
+
+.s-intro {
+    max-width: 410px;
+}
+
+.s-title {
+    margin-bottom: 1.7rem;
+    font-size: 3.2rem;
+    color: hsl(300, 43%, 22%);
+    line-height: 90%;
+}
+
+.s-text {
+    font-size: 1.12rem;
+    color: hsl(303, 10%, 53%);
+}
+
+.s-ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 540px;
+}
+
+.s-rating {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 80%;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    font-weight: 600;
+    color:hsl(300, 43%, 22%);
+}
+
+.s-rating:nth-child(1) {
+    align-self: flex-start;
+}
+
+.s-rating:nth-child(2) {
+    align-self: center;
+}
+
+.s-rating:nth-child(3) {
+    align-self: flex-end;
+}
+
+.s-rating img {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.s-rating img:nth-child(5) {
+    margin-right: 0;
+}
+
+.s-rating__stars {
+    flex-shrink: 0;
+    margin-right: 2rem;
+}
+
+.s-quotes-section {
+    display: flex;
+    gap: 2rem;
+    min-height: 270px;
+}
+
+.s-quote {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    max-width: 350px;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    line-height: 130%;
+}
+
+.s-quote:nth-child(1) {
+    align-self: flex-start;
+}
+
+.s-quote:nth-child(2) {
+    align-self: center;
+}
+
+.s-quote:nth-child(3) {
+    align-self: flex-end;
+}
+
+.s-quote__header {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.s-quote__header img {
+    margin-right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.s-quote__author-name {
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+}
+
+.s-quote__author-type {
+    color: hsl(333, 80%, 67%);
+}
+
+.s-quote__content {
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        background-image: url("../assets/images/bg-pattern-top-mobile.svg"), url("../assets/images/bg-pattern-bottom-mobile.svg");
+    }
+    
+    .s-container {
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+    
+    .s-top {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    
+    .s-intro {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+    
+    .s-title {
+        margin-bottom: 1.5rem;
+        font-size: 2.3rem;
+    }
+    
+    .s-rating {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .s-rating__stars {
+        margin-bottom: 0.4rem;
+        margin-right: 0;
+    }
+    
+    .s-quotes-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .s-quote:nth-child(1) {
+        align-self: center;
+    }
+    
+    .s-quote:nth-child(3) {
+        align-self: center;
+    }
+}
